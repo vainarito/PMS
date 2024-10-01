@@ -139,7 +139,7 @@
                     android:id="@+id/button"
                     style="@android:style/Widget.Button"
                     android:layout_width="80dp"
-                    android:layout_height="30dp"
+                    android:layout_height="48dp"
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/purple_backgroung"
                     android:text="Купить"
@@ -430,6 +430,7 @@
             app:backgroundTint="@color/purple_Dark"
             app:layout_anchor="@id/appBar"
             app:maxImageSize="30dp"
-            app:tint="@color/white" />
+            app:tint="@color/white"
+            android:contentDescription="@string/qr_code_description" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

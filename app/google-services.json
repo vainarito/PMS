@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "928732887125",
+    "project_id": "android-shop-e194f",
+    "storage_bucket": "android-shop-e194f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928732887125:android:fe3b6e2992c0963cddbcdc",
+        "android_client_info": {
+          "package_name": "com.appbsuirpms.pms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9P_PWUVpDBdY1F-TFW-WG00lG1S0cJ4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
