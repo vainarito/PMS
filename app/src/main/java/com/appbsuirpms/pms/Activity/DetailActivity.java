@@ -28,11 +28,11 @@ public class DetailActivity extends AppCompatActivity {
         managmentCart = new ManagmentCart(this);
         statusBarColor();
     }
-
     private void statusBarColor() {
         Window window = DetailActivity.this.getWindow();
-        window.setStatusBarColor(ContextCompat.getColor(DetailActivity.this, R.color.white));
+        window.setStatusBarColor(ContextCompat.getColor(DetailActivity.this, R.color.purple_Dark));
     }
+
 
     private void getBundles() {
         object = (PopularDomain) getIntent().getSerializableExtra("object");

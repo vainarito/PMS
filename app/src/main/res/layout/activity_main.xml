@@ -10,7 +10,9 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -141,7 +143,7 @@
                     android:layout_width="80dp"
                     android:layout_height="48dp"
                     android:layout_marginEnd="16dp"
-                    android:background="@drawable/purple_backgroung"
+                    android:background="@drawable/btn_background"
                     android:text="Купить"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/textView5"
@@ -303,7 +305,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Смотреть всё"
-                    android:textColor="@color/purple_Light" />
+                    android:textColor="@color/purple_Dark" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -336,7 +338,7 @@
 
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="360dp"
                 android:layout_height="match_parent">
 
                 <LinearLayout
@@ -347,8 +349,8 @@
 
                     <ImageView
                         android:id="@+id/imageView50"
-                        android:layout_width="24dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/btn_1"
                         tools:srcCompat="@drawable/btn_1" />
@@ -363,8 +365,8 @@
 
                     <ImageView
                         android:id="@+id/imageView51"
-                        android:layout_width="24dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="center"
 
                         app:srcCompat="@drawable/btn_2"
@@ -377,16 +379,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
                     android:orientation="vertical"
-                    android:visibility="invisible">
-
-                    <ImageView
-                        android:id="@+id/imageView52"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="center"
-                        tools:srcCompat="@drawable/btn_1" />
-
-                </LinearLayout>
+                    android:visibility="visible" />
 
                 <LinearLayout
                     android:id="@+id/cartBtn"
@@ -397,8 +390,8 @@
 
                     <ImageView
                         android:id="@+id/imageView53"
-                        android:layout_width="24dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/btn_3"
                         tools:srcCompat="@drawable/btn_3" />
@@ -406,15 +399,16 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/profileBtn"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="37dp"
                     android:layout_weight="0.2"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imageView54"
-                        android:layout_width="24dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/btn_4"
                         tools:srcCompat="@drawable/btn_4" />

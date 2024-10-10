@@ -66,7 +66,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/minusCartBtn3"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/white_circle_background"
+        android:gravity="center"
+        android:text="×"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="100dp"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="@+id/feeEachItem"
@@ -76,10 +90,10 @@
             android:id="@+id/plusCartBtn"
             android:layout_width="28dp"
             android:layout_height="28dp"
-            android:text="+"
-            android:gravity="center"
-            android:textColor="@color/black"
             android:background="@drawable/white_circle_background"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -101,13 +115,14 @@
             android:id="@+id/minusCartBtn"
             android:layout_width="28dp"
             android:layout_height="28dp"
-            android:text="-"
-            android:textColor="@color/black"
-            android:gravity="center"
             android:layout_marginEnd="12dp"
             android:background="@drawable/white_circle_background"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/numberItemTxt"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

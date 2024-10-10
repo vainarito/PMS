@@ -17,6 +17,7 @@ import com.appbsuirpms.pms.Adapter.PopularAdapter;
 import com.appbsuirpms.pms.R;
 import com.appbsuirpms.pms.databinding.ActivityMainBinding;
 import com.appbsuirpms.pms.domain.PopularDomain;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -27,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //EdgeToEdge.enable(this);
+        //FirebaseAuth.getInstance().signOut();
+        if(FirebaseAuth.getInstance().getCurrentUser()==null){
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        }
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -37,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void bottomNavigation() {
+        binding.profileBtn.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ProfileActivity.class)));
         binding.cartBtn.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, CartActivity.class)));
     }
 
