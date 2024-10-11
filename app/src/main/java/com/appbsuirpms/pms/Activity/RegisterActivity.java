@@ -34,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
+        statusBarColor();
         setContentView(binding.getRoot());
 
         binding.signUpBth.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
                             HashMap<String, String> userInfo = new HashMap<>();
                             userInfo.put("email", binding.emailEt.getText().toString());
                             userInfo.put("username", binding.usernameEd.getText().toString());
+                            userInfo.put("profileImage", "");
                             FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(userInfo);
 

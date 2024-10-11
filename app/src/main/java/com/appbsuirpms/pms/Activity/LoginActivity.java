@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        statusBarColor();
         setContentView(binding.getRoot());
 
         binding.goToRegisterActivityTv.setOnClickListener(new View.OnClickListener() {
