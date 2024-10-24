@@ -69,12 +69,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
         return new Viewholder(binding);
     }
 
-//    public CartAdapter(ArrayList<PopularDomain> items, Context context, ChangeNumberItemsListener changeNumberItemsListener) {
-//        this.items = items;
-//        this.context = context;
-//        this.changeNumberItemsListener = changeNumberItemsListener;
-//    }
-
     @Override
     public void onBindViewHolder(@NonNull CartAdapter.Viewholder holder, int position) {
         binding.titleTxt.setText(items.get(position).getTitle());
@@ -85,7 +79,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
         int drawableResourced = holder.itemView.getResources().getIdentifier(items.get(position).getPicUrl()
                 , "drawable", holder.itemView.getContext().getPackageName());
 
-        //Uri uri = Uri.parse("android.resource://" + holder.itemView.getContext().getPackageName() + "/drawable/" + items.get(position).getPicUrl());
         Glide.with(context)
                 .load(drawableResourced)
                 .transform(new GranularRoundedCorners(30, 30, 0, 0))
@@ -95,7 +88,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
         binding.plusCartBtn.setOnClickListener(view -> managmentCart.plusNumberItem(items, position, () -> {
             notifyDataSetChanged();
             changeNumberItemsListener.change();
-            ;
+
         }));
 
         binding.minusCartBtn.setOnClickListener(view -> managmentCart.minusNumberItem(items, position, () -> {

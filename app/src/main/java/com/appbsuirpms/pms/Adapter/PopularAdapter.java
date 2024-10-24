@@ -42,17 +42,13 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.Viewhold
         binding.feeTxt.setText("$" + items.get(position).getPrice());
         binding.scoreTxt.setText("" + items.get(position).getScore());
         binding.reviewTxt.setText("" + items.get(position).getReview());
-
         int drawableResourced = holder.itemView.getResources().getIdentifier(items.get(position).getPicUrl()
                 , "drawable", holder.itemView.getContext().getPackageName());
-
         Uri uri = Uri.parse("android.resource://" + holder.itemView.getContext().getPackageName() + "/drawable/" + items.get(position).getPicUrl());
         Glide.with(context)
                 .load(uri)
                 .transform(new GranularRoundedCorners(30, 30, 0, 0))
                 .into(binding.pic);
-
-
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailActivity.class);
             intent.putExtra("object", items.get(position));
